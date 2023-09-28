@@ -1,5 +1,9 @@
 .body {
     background-color: rgb(20, 20, 20);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 body::-webkit-scrollbar{
     display: none;
@@ -19,37 +23,6 @@ body::-webkit-scrollbar{
 .card:focus-within {
     transform: scale(1.05);
 }
-
-.card-content {
-    --padding: 1.5rem;
-    padding: var(--padding);
-    background: linear-gradient(
-        hsl(0 0% 0% / 0),
-        hsl(0 0% 0% / 0.2) 10%,
-        hsl(0 0% 0% / 1)
-        );
-}
-
-.card-title {
-    position: relative;
-    width: max-content;
-}
-.card-title::after {
-    content: "";
-    position: absolute;
-    height: 4px;
-    left: calc(var(--padding) * -1);
-    bottom: -3px;
-    width: calc(100% + var(--padding));
-    background: var(--clr-accent-400);
-    transform-origin: left;
-    transition: transform 500ms ease;
-}
-.card:hover .card-title:after,
-.card:focus-within .card-title:after {
-    transform: scaleX(1);
-}
-
-.card-body {
-    color: rgb(255 255 255 / 0.8);
+.footer {
+    margin-top: auto;
 }
