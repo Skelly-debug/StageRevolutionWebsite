@@ -1,4 +1,4 @@
-const spinnerWrapperEl = document.getElementsByClassName('spinner-wrapper');
+const spinnerWrapperEl = document.getElementById('spinner-wrapper');
 window.addEventListener('load', () => {
    spinnerWrapperEl.style.opacity = '0';
 
