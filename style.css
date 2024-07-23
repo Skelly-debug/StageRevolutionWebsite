@@ -37,6 +37,7 @@ body::-webkit-scrollbar {
   background-size: cover;
   border-radius: 0.6rem;
   overflow: hidden;
+  margin-bottom: 20px;
 
   transition: transform 500ms ease;
 }
