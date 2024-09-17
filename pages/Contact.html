@@ -41,25 +41,37 @@
     <h1 class="text-center">Contact Us</h1></br>
 
     <hr data-content="AND" class="hr-text text-center">
-<div class="container py-4">
-  <form id="contactForm" action="mailto:thebandemail2023@gmail.com" method="post" enctype="text/plain">
-    <div class="mb-3">
-      <label class="form-label" for="name">Name</label>
-      <input class="form-control" id="name" type="text" placeholder="Name" />
+    <div class="container py-4">
+      <form id="contact-form" method="POST" action="../sendmail.php">
+        <div class="mb-3 d-none form-error"></div> <!-- Error container, initially hidden -->
+    
+        <div class="mb-3">
+          <label for="contact-form-name" class="form-label">Name:</label>
+          <input id="contact-form-name" class="form-control" type="text" name="name" placeholder="Name" required />
+        </div>
+    
+        <div class="mb-3">
+          <label for="contact-form-email" class="form-label">Email:</label>
+          <input id="contact-form-email" class="form-control" type="email" name="email" placeholder="Email Address" required />
+        </div>
+    
+        <div class="mb-3">
+          <label for="contact-form-phone" class="form-label">Phone:</label>
+          <input id="contact-form-phone" class="form-control" type="tel" name="phone" placeholder="Phone" />
+        </div>
+    
+        <div class="mb-3">
+          <label for="contact-form-message" class="form-label">Message:</label>
+          <textarea id="contact-form-message" class="form-control" name="message" placeholder="Message" required style="height: 10rem;"></textarea>
+        </div>
+    
+        <div class="d-grid">
+          <button type="submit" class="btn btn-secondary btn-lg">Submit</button>
+        </div>
+      </form>
     </div>
-    <div class="mb-3">
-      <label class="form-label" for="emailAddress">Email Address</label>
-      <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" />
-    </div>
-    <div class="mb-3">
-      <label class="form-label" for="message">Message</label>
-      <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
-    </div>
-    <div class="d-grid">
-      <button class="btn btn-secondary btn-lg" type="submit" value="send">Submit</button>
-    </div>
-  </form>
-</div>
+    
+    
 
 <footer class="text-center text-white" style="background-color: rgb(28, 30, 34); margin-top: 72px;">
   <!-- Grid container -->
